@@ -1,0 +1,81 @@
+.material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+}
+
+.smooth-scroll-behavior {
+    scroll-behavior: smooth;
+}
+
+.arabic-text {
+    line-height: 2.5;
+    word-spacing: 0.2em;
+}
+
+.animate-once {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+    transition-delay: var(--delay, 0ms);
+    will-change: opacity, transform;
+}
+
+.animate-once.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+[data-animate-delay="100"] {
+    --delay: 100ms;
+}
+
+[data-animate-delay="200"] {
+    --delay: 200ms;
+}
+
+[data-animate-delay="300"] {
+    --delay: 300ms;
+}
+
+[data-animate-delay="400"] {
+    --delay: 400ms;
+}
+
+[data-animate-delay="500"] {
+    --delay: 500ms;
+}
+
+[data-animate-delay="600"] {
+    --delay: 600ms;
+}
+
+.fade-in-glow {
+    animation: glow 3s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        box-shadow: 0 0 0 rgba(194, 101, 42, 0);
+    }
+    to {
+        box-shadow: 0 0 28px rgba(194, 101, 42, 0.18);
+    }
+}
+
+.locked-section {
+    display: none;
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

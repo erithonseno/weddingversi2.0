@@ -1,0 +1,369 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Gina &amp; Ethon Wedding Invitation</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,700;1,400;1,700&amp;family=Manrope:wght@300;400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface": "#faf5ee",
+                        "secondary": "#78706a",
+                        "tertiary": "#8c3c3c",
+                        "primary": "#c2652a",
+                        "on-surface": "#3a302a",
+                        "background": "#faf5ee",
+                        "outline-variant": "#d8d0c8",
+                        "surface-container": "#f2ece4",
+                        "surface-container-low": "#f6f0e8",
+                    },
+                    "fontFamily": {
+                        "headline": ["EB Garamond", "serif"],
+                        "display": ["EB Garamond", "serif"],
+                        "body": ["Manrope", "sans-serif"],
+                        "label": ["Manrope", "sans-serif"]
+                    }
+                },
+            },
+        }
+    </script>
+</head>
+
+<body class="bg-background text-on-surface font-body smooth-scroll-behavior">
+    <!-- Top Navigation -->
+    <nav class="bg-surface/90 backdrop-blur-md border-b border-outline-variant/60 shadow-sm sticky top-0 z-50">
+        <div class="flex justify-between items-center w-full px-6 py-4 max-w-7xl mx-auto animate-once"
+            data-animate-delay="100">
+            <span class="font-serif text-2xl italic text-primary">Gina &amp; Ethon</span>
+            <div class="hidden md:flex gap-8 items-center">
+                <a class="text-secondary hover:text-primary transition-colors font-label uppercase tracking-widest text-xs"
+                    href="#story">Our Story</a>
+                <a class="text-secondary hover:text-primary transition-colors font-label uppercase tracking-widest text-xs"
+                    href="#event">The Event</a>
+                <a class="text-secondary hover:text-primary transition-colors font-label uppercase tracking-widest text-xs"
+                    href="#quote">Sacred Quote</a>
+            </div>
+            <a class="bg-primary text-white px-5 py-2 rounded-lg text-xs font-label uppercase tracking-widest hover:opacity-80 transition-opacity active:scale-95"
+                href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Gina+%26+Ethon+Wedding&dates=20260628/20260629&details=Undangan+pernikahan+Gina+%26+Ethon.%0AGanti+nama+tamu+di+URL+dengan+parameter+guest.&location=Griya+Setia+Bangsa&sf=true"
+                target="_blank">
+                Save the Date
+            </a>
+        </div>
+    </nav>
+    <!-- Hero Section -->
+    <section id="hero-section" class="relative min-h-screen flex items-center justify-center overflow-hidden py-24 animate-once"
+        data-animate-delay="200">
+        <div class="absolute inset-0 z-0">
+            <div class="absolute inset-0 bg-surface/40 z-10"></div>
+            <img alt="Dreamy outdoor wedding ceremony venue" class="w-full h-full object-cover"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBTFmgQDhrkdiZe8rDLlAHCJV4FAASA11fUqzklzrPmrn2u9_2HbMcsIvUUJ9EZuQKJs1qMKeT63Z1Zc9Wi7Wj-sTGHFGztDYVzxNsp0SlaH_VZL68fOwVR3EdDDyLm-AZNMLirqrh42puobAS09C4yMOS4aoe1pTiX_nZDpY4PsGEBnyrK6EzMSx26LWSIRvUVtBdpCw-yDHgeXHS6EnlnKiHmy2BmFlVh2DRGVPQXAL_UX8ju-atiTyoqx_o6AFTTu44eZzxaC7Rz" />
+        </div>
+        <div class="relative z-20 text-center px-6 max-w-3xl">
+            <div class="mb-8 flex flex-col items-center">
+                <span class="font-label uppercase tracking-[0.4em] text-[10px] text-black font-bold mb-4">The Wedding
+                    of</span>
+                <h1 class="font-display text-7xl md:text-9xl text-on-surface leading-none mb-6">Gina &amp; Ethon</h1>
+                <div class="flex items-center gap-4 w-full">
+                    <div class="h-[1px] flex-grow bg-on-surface/20"></div>
+                    <span class="font-label text-xs tracking-widest text-on-surface font-semibold">28 JUNI 2026</span>
+                    <div class="h-[1px] flex-grow bg-on-surface/20"></div>
+                </div>
+            </div>
+            <div class="bg-white/40 backdrop-blur-sm border border-white/60 p-8 rounded-xl max-w-sm mx-auto mt-12 shadow-sm animate-once"
+                data-animate-delay="200">
+                <p class="font-label uppercase tracking-widest text-[10px] text-secondary mb-4">Kepada Yth.
+                    Bapak/Ibu/Saudara/i</p>
+                <h3 class="font-headline text-3xl text-on-surface mb-2" data-guest-name>Guest Name Here</h3>
+                <p class="font-body text-sm italic text-secondary mb-4">We would be honored by your presence</p>
+                <button id="open-invitation-btn" class="bg-primary text-white px-6 py-3 rounded-lg text-sm font-label uppercase tracking-widest hover:opacity-80 transition-opacity">Lihat Undangan</button>
+                <p class="font-body text-xs text-secondary mt-2">Klik untuk membuka undangan lengkap</p>
+            </div>
+        </div>
+    </section>
+    <!-- Quote Section -->
+    <section class="py-24 px-6 bg-surface-container-low animate-once locked-section" data-animate-delay="200" id="quote">
+        <div class="max-w-3xl mx-auto text-center">
+            <div class="mb-12 animate-once" data-animate-delay="300">
+                <span class="material-symbols-outlined text-primary text-3xl mb-4">auto_awesome</span>
+            </div>
+            <div class="mb-8">
+                <img src="aset/basmallah.png" alt="Basmallah" class="mx-auto max-w-xs" />
+            </div>
+            <p class="font-serif text-3xl md:text-4xl text-black leading-loose mb-8 arabic-text" dir="rtl">
+                وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُمْ مِنْ أَنْفُسِكُمْ أَزْوَاجًا لِتَسْكُنُوا إِلَيْهَا وَجَعَلَ
+                بَيْنَكُمْ مَوَدَّةً وَرَحْمَةً ۚ إِنَّ فِي ذَٰلِكَ لآيَاتٍ لِقَوْمٍ يَتَفَكَّرُونَ
+            </p>
+            <p class="font-display italic text-xl md:text-2xl text-black leading-relaxed mb-8">
+                "Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan pasangan-pasangan untukmu dari jenismu
+                sendiri, agar kamu cenderung dan merasa tenteram kepadanya, dan Dia menjadikan di antaramu rasa kasih
+                dan sayang. Sesungguhnya pada yang demikian itu benar-benar terdapat tanda-tanda bagi kaum yang
+                berpikir."
+            </p>
+            <span class="font-label uppercase tracking-widest text-xs text-black font-semibold">( AR-RUM: 21 )</span>
+        </div>
+    </section>
+    <!-- Couple Details -->
+    <section class="py-32 px-6 max-w-7xl mx-auto locked-section animate-once" data-animate-delay="200">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-24 items-center">
+            <!-- Bride -->
+            <div class="text-center space-y-4">
+                <div class="mb-4">
+                    <span class="font-label uppercase tracking-widest text-[10px] text-primary">The Bride</span>
+                </div>
+                <h2 class="font-display text-5xl md:text-6xl text-on-surface">Fitri Regina Anugerah, S.Pd</h2>
+                <p class="font-body text-secondary max-w-xs mx-auto text-sm leading-relaxed">
+                    Putri Kedua dari Bapak Jamjuri dan Ibu Juraidah
+                </p>
+            </div>
+            <!-- Groom -->
+            <div class="text-center space-y-4">
+                <div class="mb-4">
+                    <span class="font-label uppercase tracking-widest text-[10px] text-primary">The Groom</span>
+                </div>
+                <h2 class="font-display text-5xl md:text-6xl text-on-surface">Erithon Seno, S.Pd</h2>
+                <p class="font-body text-secondary max-w-xs mx-auto text-sm leading-relaxed">
+                    Putra Pertama dari Bapak Emri.D dan Ibu Ermiza
+                </p>
+            </div>
+        </div>
+    </section>
+    <!-- Our Story Section -->
+    <section class="py-24 px-6 bg-surface-container animate-once locked-section" data-animate-delay="200" id="story">
+        <div class="max-w-6xl mx-auto text-center">
+            <div class="inline-flex flex-col items-center mb-16 animate-once" data-animate-delay="300">
+                <span class="font-label uppercase tracking-[0.4em] text-[10px] text-primary mb-2">Our Story</span>
+                <h2 class="font-display text-5xl md:text-6xl text-on-surface">Cerita Kami</h2>
+                <div class="w-12 h-[1px] bg-primary mt-6"></div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Card 1 -->
+                <div class="bg-surface p-8 rounded-2xl border border-outline-variant/30 shadow-sm transition-all hover:shadow-md flex flex-col justify-center min-h-[300px] animate-once"
+                    data-animate-delay="300">
+                    <p class="font-label italic text-primary uppercase tracking-widest text-[10px] mb-6">When we met</p>
+                    <p class="font-headline text-lg md:text-xl text-on-surface leading-relaxed italic">
+                        "Kami tidak bertemu lewat rencana besar, hanya sebuah pertemuan sederhana.. namun dari sana,
+                        percakapan kecil berubah menjadi rasa nyaman yang diam-diam tumbuh di hati 🤍"
+                    </p>
+                </div>
+                <!-- Card 2 -->
+                <div class="bg-surface p-8 rounded-2xl border border-outline-variant/30 shadow-sm transition-all hover:shadow-md flex flex-col justify-center min-h-[300px] animate-once"
+                    data-animate-delay="320">
+                    <p class="font-label italic text-primary uppercase tracking-widest text-[10px] mb-6">Becoming Us</p>
+                    <p class="font-headline text-lg md:text-xl text-on-surface leading-relaxed italic">
+                        "Hari demi hari, kami belajar saling mengenal. Bukan hanya tentang bahagia, tetapi juga tentang
+                        perbedaan, luka dan doa. Karena cinta bukan tentang kesempurnaan, melainkan tentang bertahan 🌱"
+                    </p>
+                </div>
+                <!-- Card 3 -->
+                <div class="bg-surface p-8 rounded-2xl border border-outline-variant/30 shadow-sm transition-all hover:shadow-md flex flex-col justify-center min-h-[300px] animate-once"
+                    data-animate-delay="340">
+                    <p class="font-label italic text-primary uppercase tracking-widest text-[10px] mb-6">A Sacred
+                        Promise</p>
+                    <p class="font-headline text-lg md:text-xl text-on-surface leading-relaxed italic">
+                        "Dengan keyakinan yang semakin kuat, dan restu dari kedua keluarga, kami mengikat sebuah janji
+                        dalam pertunangan 💍 sebagai langkah serius menuju masa depan bersama."
+                    </p>
+                </div>
+                <!-- Card 4 -->
+                <div class="bg-surface p-8 rounded-2xl border border-outline-variant/30 shadow-sm transition-all hover:shadow-md flex flex-col justify-center min-h-[300px] animate-once"
+                    data-animate-delay="360">
+                    <p class="font-label italic text-primary uppercase tracking-widest text-[10px] mb-6">Our Forever
+                        Begins</p>
+                    <p class="font-headline text-lg md:text-xl text-on-surface leading-relaxed italic">
+                        "Kini, dengan niat yang sama dan doa yang menyertai, kami memilih untuk menyempurnakan
+                        perjalanan ini dalam ikatan suci pernikahan 🤍 sebagai awal baru untuk berbagi hidup, tumbuh dan
+                        menua bersama."
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Countdown Section -->
+    <section class="bg-primary text-white py-20 locked-section animate-once" data-animate-delay="200">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h3 class="font-display text-4xl mb-12 animate-once" data-animate-delay="300">Counting Down to Forever</h3>
+            <div class="grid grid-cols-4 gap-4 md:gap-8">
+                <div class="flex flex-col animate-once" data-animate-delay="300">
+                    <span id="count-days" class="text-4xl md:text-6xl font-headline">00</span>
+                    <span class="font-label uppercase text-[10px] tracking-widest opacity-80">Days</span>
+                </div>
+                <div class="flex flex-col animate-once" data-animate-delay="300">
+                    <span id="count-hours" class="text-4xl md:text-6xl font-headline">00</span>
+                    <span class="font-label uppercase text-[10px] tracking-widest opacity-80">Hours</span>
+                </div>
+                <div class="flex flex-col animate-once" data-animate-delay="300">
+                    <span id="count-minutes" class="text-4xl md:text-6xl font-headline">00</span>
+                    <span class="font-label uppercase text-[10px] tracking-widest opacity-80">Minutes</span>
+                </div>
+                <div class="flex flex-col animate-once" data-animate-delay="300">
+                    <span id="count-seconds" class="text-4xl md:text-6xl font-headline">00</span>
+                    <span class="font-label uppercase text-[10px] tracking-widest opacity-80">Seconds</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Event Details -->
+    <section class="py-32 px-6 locked-section" id="event">
+        <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
+            <!-- Ceremony Card -->
+            <div
+                class="bg-white p-12 rounded-xl shadow-sm border border-outline-variant/20 flex flex-col items-center text-center">
+                <span class="material-symbols-outlined text-primary text-4xl mb-6">ring_volume</span>
+                <h3 class="font-display text-4xl text-on-surface mb-4">Akad Nikah</h3>
+                <p class="font-label text-xs tracking-widest text-primary mb-8 font-bold">Pukul 09.00 WIB</p>
+                <div class="space-y-2 text-secondary mb-10 text-sm">
+                    <p class="font-semibold text-on-surface">Perumahan Griya Setia Bangsa</p>
+                    <p>Desa Karya Indah, Kec. Tapung, Kabupaten Kampar, Riau 28291</p>
+                </div>
+                <a class="border border-primary text-primary px-8 py-3 rounded-lg text-[10px] font-label uppercase tracking-widest hover:bg-primary hover:text-white transition-all"
+                    href="https://maps.app.goo.gl/gFo5iTaDUnu5tEEWA" target="_blank">
+                    Lihat Lokasi
+                </a>
+            </div>
+            <!-- Reception Card -->
+            <div
+                class="bg-white p-12 rounded-xl shadow-sm border border-outline-variant/20 flex flex-col items-center text-center">
+                <span class="material-symbols-outlined text-primary text-4xl mb-6">restaurant</span>
+                <h3 class="font-display text-4xl text-on-surface mb-4">Resepsi</h3>
+                <p class="font-label text-xs tracking-widest text-primary mb-8 font-bold">Pukul 10.00 - Selesai</p>
+                <div class="space-y-2 text-secondary mb-10 text-sm">
+                    <p class="font-semibold text-on-surface">Perumahan Griya Setia Bangsa</p>
+                    <p>Desa Karya Indah, Kec. Tapung, Kabupaten Kampar, Riau 28291</p>
+                </div>
+                <a class="border border-primary text-primary px-8 py-3 rounded-lg text-[10px] font-label uppercase tracking-widest hover:bg-primary hover:text-white transition-all"
+                    href="https://maps.app.goo.gl/gFo5iTaDUnu5tEEWA" target="_blank">
+                    Lihat Lokasi
+                </a>
+            </div>
+        </div>
+    </section>
+    <!-- Maps Section -->
+    <section class="pb-32 px-6 locked-section" id="location-map">
+        <div class="max-w-5xl mx-auto">
+            <div class="text-center mb-12">
+                <div class="inline-flex flex-col items-center">
+                    <span class="font-label uppercase tracking-[0.4em] text-[10px] text-primary mb-2">Location</span>
+                    <h2 class="font-display text-4xl text-on-surface">Denah Lokasi</h2>
+                    <div class="w-12 h-[1px] bg-primary mt-4"></div>
+                </div>
+            </div>
+            <div class="bg-white p-2 rounded-2xl shadow-sm border border-outline-variant/30 overflow-hidden">
+                <div class="aspect-video w-full rounded-xl overflow-hidden grayscale-[20%] opacity-90">
+                    <iframe allowfullscreen="" height="100%" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.6644026857116!2d101.2954845!3d0.5034612!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31d5ac2394c483a9%3A0xc0c649567990141a!2sGriya%20Setia%20Bangsa!5e0!3m2!1sen!2sid!4v1716384210000!5m2!1sen!2sid"
+                        style="border:0;" width="100%"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Digital Gift Section -->
+    <section class="py-24 px-6 bg-surface-container-low locked-section" id="gift">
+        <div class="max-w-4xl mx-auto text-center">
+            <div class="inline-flex flex-col items-center mb-12">
+                <span class="font-label uppercase tracking-[0.4em] text-[10px] text-primary mb-2">Tanda Kasih</span>
+                <h2 class="font-display text-5xl text-on-surface">Digital Gift</h2>
+                <div class="w-12 h-[1px] bg-primary mt-6"></div>
+            </div>
+            <div class="bg-white p-10 rounded-2xl shadow-sm border border-outline-variant/30 max-w-md mx-auto">
+                <div class="mb-8">
+                    <img alt="Debit Card Logo" class="h-10 mx-auto mb-4 object-contain"
+                        src="aset/debit-card.svg" />
+                    <p class="font-label font-bold text-lg text-on-surface mb-2">BSI (Bank Syariah Indonesia)</p>
+                    <p class="font-body text-2xl tracking-widest text-primary font-bold mb-1">1151386595</p>
+                    <p class="font-label text-sm text-secondary uppercase">a.n. Fitri Regina Anugerah</p>
+                </div>
+                <div class="mt-8 mb-4 border-t border-outline-variant/30 pt-6">
+                    <p class="font-label font-bold text-lg text-on-surface mb-2">Bank Jago Syariah</p>
+                    <p class="font-body text-2xl tracking-widest text-primary font-bold mb-1">503321893760</p>
+                    <p class="font-label text-sm text-secondary uppercase">a.n. Erithon Seno</p>
+                </div>
+                <button
+                    class="bg-primary text-white px-6 py-3 rounded-lg text-xs font-label uppercase tracking-widest hover:opacity-90 transition-opacity flex items-center justify-center gap-2 mx-auto"
+                    onclick="navigator.clipboard.writeText('1151386595')">
+                    <span class="material-symbols-outlined text-sm">content_copy</span>
+                    Salin Nomor Rekening BSI
+                </button>
+                <button
+                    class="bg-secondary text-white px-6 py-3 rounded-lg text-xs font-label uppercase tracking-widest hover:opacity-90 transition-opacity flex items-center justify-center gap-2 mx-auto mt-4"
+                    onclick="navigator.clipboard.writeText('503321893760')">
+                    <span class="material-symbols-outlined text-sm">content_copy</span>
+                    Salin Nomor Rekening Jago
+                </button>
+            </div>
+            <p class="mt-8 font-body text-sm text-secondary italic">Doa restu Anda adalah kado terindah bagi kami.</p>
+        </div>
+    </section>
+    <!-- RSVP Section -->
+    <section class="py-24 px-6 bg-surface locked-section" id="rsvp">
+        <div class="max-w-2xl mx-auto">
+            <div class="text-center mb-12">
+                <div class="inline-flex flex-col items-center">
+                    <span class="font-label uppercase tracking-[0.4em] text-[10px] text-primary mb-2">RSVP</span>
+                    <h2 class="font-display text-5xl text-on-surface">Konfirmasi Kehadiran</h2>
+                    <div class="w-12 h-[1px] bg-primary mt-6"></div>
+                </div>
+            </div>
+            <div class="bg-white p-10 rounded-2xl shadow-sm border border-outline-variant/30">
+                <form id="rsvp-form" method="POST">
+                    <div class="mb-6">
+                        <label class="block font-label text-sm text-on-surface mb-2 uppercase tracking-widest">Nama Lengkap *</label>
+                        <input type="text" name="nama" required class="w-full px-4 py-3 border border-outline-variant/50 rounded-lg font-body text-on-surface focus:outline-none focus:border-primary" placeholder="Masukkan nama lengkap" />
+                    </div>
+                    <div class="mb-8">
+                        <label class="block font-label text-sm text-on-surface mb-3 uppercase tracking-widest">Konfirmasi Kehadiran *</label>
+                        <div class="flex gap-6">
+                            <label class="flex items-center gap-2 cursor-pointer">
+                                <input type="radio" name="konfirmasi" value="Hadir" required class="w-4 h-4 accent-primary" />
+                                <span class="font-body text-on-surface">Saya Akan Hadir</span>
+                            </label>
+                            <label class="flex items-center gap-2 cursor-pointer">
+                                <input type="radio" name="konfirmasi" value="Tidak Hadir" required class="w-4 h-4 accent-primary" />
+                                <span class="font-body text-on-surface">Saya Tidak Bisa Hadir</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="mb-6">
+                        <label class="block font-label text-sm text-on-surface mb-2 uppercase tracking-widest">Pesan (Opsional)</label>
+                        <textarea name="pesan" rows="4" class="w-full px-4 py-3 border border-outline-variant/50 rounded-lg font-body text-on-surface focus:outline-none focus:border-primary resize-none" placeholder="Tulis doa dan harapan Anda..."></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-primary text-white px-6 py-3 rounded-lg font-label uppercase tracking-widest hover:opacity-90 transition-opacity">Kirim Konfirmasi</button>
+                </form>
+            </div>
+            <p class="text-center mt-6 font-body text-sm text-secondary italic">Terima kasih telah meluangkan waktu untuk merayakan hari istimewa kami.</p>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="py-12 px-6 border-t border-outline-variant/30 text-center locked-section">
+        <p class="font-serif text-2xl italic text-primary mb-4">Gina &amp; Ethon</p>
+        <p class="font-label text-[10px] uppercase tracking-widest text-secondary mb-8">28 . 06 . 2026</p>
+        <div class="flex justify-center gap-6 mb-8">
+            <span class="material-symbols-outlined text-primary/40 text-sm"
+                style='font-variation-settings: "FILL" 1;'>favorite</span>
+        </div>
+        <p class="font-body text-[10px] text-secondary/60 tracking-widest">DESIGNED WITH LOVE FOR GINA &amp; ETHON</p>
+    </footer>
+    <!-- Audio Element -->
+    <audio id="backsound" loop preload="auto" playsinline>
+        <source src="aset/musik.MP3" type="audio/mpeg">
+        Browser Anda tidak mendukung elemen audio.
+    </audio>
+    <!-- Mute Button -->
+    <button id="mute-btn" class="fixed bottom-4 right-4 bg-primary text-white p-3 rounded-full shadow-lg hover:opacity-80 transition-opacity z-50">
+        🔊
+    </button>
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+
+</html>
