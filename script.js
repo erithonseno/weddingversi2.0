@@ -142,3 +142,36 @@ document.addEventListener("DOMContentLoaded", function () {
 
 });
 
+document.addEventListener('DOMContentLoaded', function() {
+    const audio = document.getElementById('backsound');
+    const openBtn = document.getElementById('open-invitation-btn');
+    const muteBtn = document.getElementById('mute-btn');
+    let isPlaying = false;
+
+    // 1. Fungsi untuk Memutar Musik saat tombol "Lihat Undangan" diklik
+    if (openBtn) {
+        openBtn.addEventListener('click', function() {
+            audio.play().then(() => {
+                isPlaying = true;
+                muteBtn.innerHTML = '🔊'; // Icon speaker menyala
+            }).catch(error => {
+                console.log("Autoplay dicegah oleh browser:", error);
+            });
+        });
+    }
+
+    // 2. Fungsi Tombol Mute/Unmute (Tombol di pojok kanan bawah)
+    if (muteBtn) {
+        muteBtn.addEventListener('click', function() {
+            if (isPlaying) {
+                audio.pause();
+                muteBtn.innerHTML = '🔇';
+            } else {
+                audio.play();
+                muteBtn.innerHTML = '🔊';
+            }
+            isPlaying = !isPlaying;
+        });
+    }
+});
+
