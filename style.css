@@ -24,6 +24,34 @@
     transform: translateY(0);
 }
 
+.animate-pop {
+    transform: translateY(24px) scale(0.96);
+    transition: opacity 0.9s ease, transform 0.9s cubic-bezier(.22,1,.36,1);
+}
+
+.animate-pop.visible {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+.animate-wave.visible {
+    animation: wave 0.9s ease both;
+}
+
+@keyframes wave {
+    0% {
+        opacity: 0;
+        transform: translateY(26px) rotate(-3deg) scale(0.98);
+    }
+    60% {
+        opacity: 1;
+        transform: translateY(-6px) rotate(2deg) scale(1.01);
+    }
+    100% {
+        transform: translateY(0) rotate(0) scale(1);
+    }
+}
+
 [data-animate-delay="100"] {
     --delay: 100ms;
 }
